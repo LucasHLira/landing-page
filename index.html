@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pipolu Pipocas Gourmet</title>
+
+  <!-- FAVICON (icone da aba) -->
+  <link rel="icon" href="Fotos_pipoca/logo.jpeg" type="image/png">
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <!-- LOGO NO SITE -->
+  <img src="Fotos_pipoca/logo.jpeg" alt="Logo Pipolu" class="logo">
+
+  <h1>Pipolu Pipocas Gourmet</h1>
+  <p>A pipoca mais viciante da cidade 🍿</p>
+  <a class="btn" href="https://wa.me/5513991186957?text=Quero%20pedir%20pipoca" target="_blank">Fazer Pedido</a>
+</header>
+
+<section>
+  <h2 class="title">Nossos Sabores</h2>
+  <div class="products">
+
+    <div class="card">
+      <img src="Fotos_pipoca/png/ninho.png" alt="Leite Ninho">
+      <h3>Leite Ninho</h3>
+    </div>
+
+    <div class="card">
+      <img src="Fotos_pipoca/png/nutella.png" alt="Nutela">
+      <h3>Nutela</h3>
+    </div>
+
+    <div class="card">
+      <img src="Fotos_pipoca/png/caramelo_flor_de_sal.png" alt="Caramelo">
+      <h3>Caramelo Flor de Sal</h3>
+    </div>
+
+    <div class="card">
+      <img src="Fotos_pipoca/png/ovomaltine.png" alt="Ovomaltine">
+      <h3>Ovomaltine</h3>
+    </div>
+    
+    <div class="card">
+      <img src="Fotos_pipoca/png/maracuja.png" alt="Maracujá">
+      <h3>Mousse de Maracujá</h3>
+    </div>
+
+  </div>
+</section>
+<!-- BOTÃO PARA ABRIR LISTA DE SABORES -->
+<section class="sabores-section">
+  <h2 class="title">Ver todos os sabores</h2>
+  <button class="btn" onclick="toggleSabores()">Mostrar Sabores</button>
+
+  <div id="listaSabores" class="sabores hidden">
+    <p>Ninho</p>
+    <p>Nutella</p>
+    <p>Ovomaltine</p>
+    <p>Sensação</p>
+    <p>Paçoca</p>
+    <p>Paçoca c/ Chocolate</p> 
+    <p>Oreo</p>
+    <p>Caramelo Flor de Sal</p> 
+    <p>Nesquik</p>
+    <p>Mousse de Maracujá</p> 
+    <p>Napolitano</p>
+    <p>Chocolate 50% Cacau</p> 
+    <p>Coco</p>
+    <p>Pistache</p>
+    <p>Amendoim</p>
+    <p>Limão Siciliano</p> 
+  </div>
+</section>
+
+
+<section>
+  <h2 class="title">O que dizem</h2>
+  <div class="testimonials">
+    <div class="testimonial">⭐ Melhor pipoca que já comi!</div>
+    <div class="testimonial">😍 Viciante demais</div>
+  </div>
+</section>
+
+<section>
+  <h2 class="title">Sobre nós</h2>
+  <p class="about">
+    Produzimos pipocas gourmet com muito carinho e ingredientes selecionados.
+    Cada pedido é feito com amor para garantir a melhor experiência 🍿
+  </p>
+</section>
+
+<footer>
+  <a class="btn" href="https://wa.me/5513991186957?text=Quero%20pedir%20pipoca" target="_blank">Peça Agora</a>
+</footer>
+
+<a href="https://wa.me/5513991186957?text=Quero%20pedir%20pipoca" class="whatsapp-float" target="_blank">💬</a>
+
+<!-- SCRIPT SIMPLES -->
+<script>
+function toggleSabores() {
+  const lista = document.getElementById('listaSabores');
+  lista.classList.toggle('hidden');
+}
+</script>
+
+</body>
+</html>
+
