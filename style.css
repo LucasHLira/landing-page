@@ -122,6 +122,67 @@ footer {
   text-decoration:none;
   box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
+.ifood {
+  background: #ea1d2c;
+}
+
+.keeta {
+  background: #ff7a00;
+}
+.ifood-float {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #ea1d2c;
+  color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.keeta-float {
+  position: fixed;
+  bottom: 140px;
+  right: 20px;
+  background: #e5ff00;
+  color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.ifood:hover,
+.keeta:hover {
+  transform: scale(1.08);
+}
+
+.float-group a img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  text-align: center;
+}
+
+.float-group a {
+  position: fixed;
+  right: 20px;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  text-decoration: none;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
 
 @media(max-width:600px){
   header h1 { font-size:2rem; }

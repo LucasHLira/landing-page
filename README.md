@@ -15,7 +15,7 @@ Criar uma página simples, bonita e eficiente para aumentar pedidos e fortalecer
 ## ✨ Funcionalidades
 
 * Design moderno e responsivo
-* Botão de pedido direto via WhatsApp
+* Botão de pedido direto via WhatsApp, Ifood e Keeta
 * Lista interativa de sabores
 * Seção de produtos com efeito visual
 * Depoimentos de clientes
