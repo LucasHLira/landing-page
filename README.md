@@ -27,7 +27,7 @@ A página foi desenvolvida com foco em dispositivos móveis, garantindo uma boa 
 
 ## 🔗 Acesse o projeto
 
-(Coloque aqui o link do seu site na Vercel)
+[Clique aqui!](https://pipolulandingpage.vercel.app/)
 
 ## 📸 Preview
 
