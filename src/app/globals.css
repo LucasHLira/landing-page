@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+/* Mesmos valores de src/styles/design-tokens.ts — mudou lá, muda aqui. */
+@theme {
+  --color-creme: #fefaf7;
+  --color-creme-escuro: #f7eee8;
+  --color-ameixa: #2d2140;
+  --color-ameixa-suave: #5e5072;
+
+  --color-lilas: #c1a2e8;
+  --color-lilas-forte: #7651c4;
+  --color-lilas-claro: #f1e8fb;
+  --color-agua: #73cecf;
+  --color-agua-forte: #1f7275;
+  --color-agua-claro: #dff4f4;
+  --color-rosa: #f87c94;
+  --color-rosa-forte: #d23a62;
+  --color-rosa-forte-hover: #b92f55;
+  --color-rosa-claro: #fde6eb;
+
+  --color-whatsapp: #25d366;
+  --color-ifood: #ea1d2c;
+  --color-noventa: #ffd400;
+  --color-instadelivery: #5b2eff;
+
+  --font-display: var(--font-fredoka), ui-rounded, system-ui, sans-serif;
+  --font-sans: var(--font-nunito), system-ui, sans-serif;
+
+  --radius-4xl: 2rem;
+  --radius-5xl: 2.5rem;
+
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-flutua: flutua 6s ease-in-out infinite;
+  --animate-gira: gira 18s linear infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes flutua {
+    0%, 100% { transform: translateY(0) rotate(var(--giro, 0deg)); }
+    50% { transform: translateY(-10px) rotate(var(--giro, 0deg)); }
+  }
+  @keyframes gira {
+    to { transform: rotate(360deg); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-creme);
+  color: var(--color-ameixa);
+}
+
+::selection {
+  background: var(--color-lilas);
+  color: var(--color-ameixa);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-lilas-forte);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

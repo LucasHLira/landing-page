@@ -1,44 +1,34 @@
-# 🍿 Landing Page - Pipoca Gourmet
+# Pipolu Pipocas Gourmet — site
 
-Projeto de uma landing page moderna e responsiva desenvolvida para uma loja de pipoca gourmet, com foco em conversão de clientes via WhatsApp.
+Landing page da Pipolu, pipoca gourmet artesanal de Santos (SP). Uma página só, com
+sabores, nossa história, depoimentos, encomendas para festa, dúvidas e os canais de pedido
+(WhatsApp, iFood, Keeta, 99Food e Instadelivery).
 
-## 🚀 Objetivo
+Stack do Jarvis: Next.js 16, TypeScript, Tailwind 4, Framer Motion e Lucide.
 
-Criar uma página simples, bonita e eficiente para aumentar pedidos e fortalecer a presença online de pequenos negócios.
+## Rodar no computador
 
-## 🛠️ Tecnologias utilizadas
+```bash
+npm install
+npm run dev
+```
 
-* HTML5
-* CSS3
-* JavaScript
+Abre em http://localhost:3000.
 
-## ✨ Funcionalidades
+## Onde mudar cada coisa
 
-* Design moderno e responsivo
-* Botão de pedido direto via WhatsApp, Ifood e Keeta
-* Lista interativa de sabores
-* Seção de produtos com efeito visual
-* Depoimentos de clientes
-* Botão flutuante de contato
+| O que | Onde |
+|---|---|
+| Telefone, sabores, links dos apps, depoimentos, perguntas | `src/lib/site.ts` (só lá) |
+| Cores e fontes | `src/styles/design-tokens.ts` e o `@theme` de `src/app/globals.css` |
+| Fotos dos sabores | `public/sabores/` (webp, 900 px de largura) |
+| Imagem que aparece ao compartilhar o link | `src/app/opengraph-image.jpg` |
 
-## 📱 Responsividade
+Sabor novo com foto: coloque o `.webp` em `public/sabores/` e acrescente a linha em
+`sabores` no `src/lib/site.ts`. A página, o Google (JSON-LD) e o `/llms.txt` se atualizam juntos.
 
-A página foi desenvolvida com foco em dispositivos móveis, garantindo uma boa experiência para usuários de celular.
+## SEO e GEO
 
-## 🔗 Acesse o projeto
-
-[Clique aqui!](https://pipolulandingpage.vercel.app/)
-
-## 📸 Preview
-
-![alt text](image.png)
-
-## 💡 Possíveis melhorias
-
-* Integração com Instagram
-* Sistema de pedidos automatizado
-* Painel administrativo
-
-## 📬 Contato
-
-Caso queira uma landing page para o seu negócio, entre em contato!
+Já vem com `robots.txt`, `sitemap.xml`, `llms.txt`, dados estruturados (`FoodEstablishment` e
+`FAQPage`) e imagem de compartilhamento. O endereço do site sai de `NEXT_PUBLIC_SITE_URL`
+(sem ela, usa `https://pipolulandingpage.vercel.app`).
