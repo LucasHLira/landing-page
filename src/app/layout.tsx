@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { ProvedorMovimento } from "@/components/provedor-movimento";
-import { site } from "@/lib/site";
+import { sabores, site } from "@/lib/site";
 import "./globals.css";
 
 // Fontes no repositório (regra do Jarvis): o build não depende do Google.
@@ -20,8 +20,7 @@ const nunito = localFont({
 });
 
 const titulo = "Pipolu Pipocas Gourmet | Pipoca gourmet artesanal em Santos";
-const descricao =
-  "Pipoca gourmet artesanal feita em Santos (SP). 16 sabores, como Leite Ninho, Nutella e Caramelo com Flor de Sal. Peça pelo WhatsApp, iFood, Keeta ou 99Food.";
+const descricao = `Pipoca gourmet artesanal feita em Santos (SP). ${sabores.length} sabores, como Leite Ninho, Nutella e Caramelo com Flor de Sal. Peça pelo WhatsApp, iFood, Keeta ou 99Food.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),

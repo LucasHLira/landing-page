@@ -10,8 +10,10 @@ export const site = {
   bairro: "Marapé",
   whatsapp: "5513991186957",
   whatsappVisivel: "(13) 99118-6957",
-  resumo:
-    "Pipoca gourmet artesanal feita em Santos (SP), em 16 sabores, com pedido pelo WhatsApp, iFood, Keeta, 99Food e Instadelivery.",
+  // Conta os sabores da lista abaixo: tirou ou pôs sabor, o texto acompanha sozinho.
+  get resumo() {
+    return `Pipoca gourmet artesanal feita em Santos (SP), em ${sabores.length} sabores, com pedido pelo WhatsApp, iFood, Keeta, 99Food e Instadelivery.`;
+  },
 };
 
 export function linkWhatsapp(mensagem: string): string {
@@ -42,13 +44,13 @@ export const canais: Canal[] = [
     id: "ifood",
     nome: "iFood",
     descricao: "Peça pelo app do iFood.",
-    url: "https://www.ifood.com.br/delivery/santos-sp/pipolu---pipocas-gourmet-marape/18824721-f655-41ba-8d59-b21a1a9a0f41",
+    url: "https://www.ifood.com.br/delivery/santos-sp/pipolu---pipocas-gourmet-marape/18824721-f655-41ba-8d59-b21a1a9a0f41?utm_medium=share",
   },
   {
     id: "keeta",
     nome: "Keeta",
     descricao: "Peça pelo app do Keeta.",
-    url: "https://url-eu.mykeeta.com/zN2ensXz",
+    url: "https://url-eu.mykeeta.com/Xpal6EAz",
   },
   {
     id: "noventa",
@@ -78,12 +80,8 @@ export const sabores: Sabor[] = [
   { nome: "Amendoim", foto: "/sabores/amendoim.webp", tom: "agua" },
   { nome: "Nesquik", foto: "/sabores/nesquik.webp", tom: "lilas" },
   { nome: "Paçoca", tom: "agua" },
-  { nome: "Oreo", tom: "lilas" },
   { nome: "Napolitano", tom: "rosa" },
   { nome: "Chocolate 50% Cacau", tom: "lilas" },
-  { nome: "Coco", tom: "agua" },
-  { nome: "Pistache", tom: "agua" },
-  { nome: "Limão Siciliano", tom: "rosa" },
 ];
 
 export type Depoimento = { texto: string; autor: string; tom: "lilas" | "agua" | "rosa" };
